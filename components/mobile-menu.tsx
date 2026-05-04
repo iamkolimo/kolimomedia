@@ -65,10 +65,10 @@ export function MobileMenu() {
               className="inline-flex items-center"
             >
               <Image
-                src="/logo.svg"
+                src="/logo.png"
                 alt={site.name}
-                width={320}
-                height={96}
+                width={1695}
+                height={512}
                 className="h-9 w-auto"
               />
             </Link>

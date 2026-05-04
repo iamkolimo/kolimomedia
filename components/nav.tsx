@@ -9,10 +9,10 @@ export function Nav() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-10">
         <Link href="/" aria-label={site.name} className="flex items-center">
           <Image
-            src="/logo.svg"
+            src="/logo.png"
             alt={site.name}
-            width={320}
-            height={96}
+            width={1695}
+            height={512}
             priority
             className="h-9 w-auto"
           />

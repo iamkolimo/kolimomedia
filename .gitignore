@@ -37,6 +37,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# raw brand source files kept locally, not shipped
+/public/KM LOGO*
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

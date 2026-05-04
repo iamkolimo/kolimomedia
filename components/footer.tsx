@@ -10,10 +10,10 @@ export function Footer() {
           <div className="md:col-span-5">
             <Link href="/" aria-label={site.name} className="inline-flex items-center">
               <Image
-                src="/logo.svg"
+                src="/logo.png"
                 alt={site.name}
-                width={320}
-                height={96}
+                width={1695}
+                height={512}
                 className="h-12 w-auto"
               />
             </Link>
