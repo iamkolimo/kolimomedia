@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { navLinks, site } from "@/lib/site";
+import { MobileMenu } from "./mobile-menu";
 
 export function Nav() {
   return (
@@ -25,13 +26,17 @@ export function Nav() {
             ))}
         </nav>
 
-        <Link
-          href="/contact"
-          className="inline-flex h-9 items-center gap-1.5 rounded-full bg-accent px-4 text-sm font-medium text-accent-foreground transition hover:opacity-90"
-        >
-          Start a project
-          <span aria-hidden>→</span>
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link
+            href="/contact"
+            className="hidden h-9 items-center gap-1.5 rounded-full bg-accent px-4 text-sm font-medium text-accent-foreground transition hover:opacity-90 md:inline-flex"
+          >
+            Start a project
+            <span aria-hidden>→</span>
+          </Link>
+
+          <MobileMenu />
+        </div>
       </div>
     </header>
   );
