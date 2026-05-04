@@ -62,11 +62,12 @@ supabase/
 
 The site ships with placeholders. Edit these to drop in real Kolimo branding:
 
-- **Logo / wordmark** — `components/nav.tsx`, `components/footer.tsx`
-- **Colors** — CSS custom properties in `app/globals.css` (look for `--accent`)
-- **Copy and services** — `lib/site.ts`
-- **Project images** — replace gradient placeholders in `app/page.tsx` and `app/portfolio/page.tsx` with `<Image>` tags pointing at uploaded assets
-- **Favicon / social image** — `app/icon.png`, `app/opengraph-image.png`
+- **Logo** — overwrite [`public/logo.svg`](./public/logo.svg) with the real Kolimo Multimedia logo (SVG strongly preferred). The same file is used in the desktop nav, the mobile drawer, and the footer — change once, updates everywhere. Aspect-ratio agnostic; the renderers fix the height (36–48px) and let the width flow.
+- **Colors** — CSS custom properties in [`app/globals.css`](./app/globals.css) (look for `--accent`)
+- **Copy, services, social links** — [`lib/site.ts`](./lib/site.ts)
+- **Project images** — replace gradient placeholders in [`app/portfolio/page.tsx`](./app/portfolio/page.tsx) with `<Image>` tags pointing at uploaded assets
+- **Favicon** — [`app/icon.tsx`](./app/icon.tsx) (currently a generated "K" — replace with a static `app/icon.png` if preferred)
+- **OG social image** — [`app/opengraph-image.tsx`](./app/opengraph-image.tsx) (rendered at request time at 1200×630)
 
 ## Deployment
 

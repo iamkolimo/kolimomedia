@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { navLinks, site } from "@/lib/site";
 
 export function Footer() {
@@ -7,10 +8,14 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <Link href="/" className="flex items-center gap-2 font-mono text-sm tracking-widest">
-              <span className="inline-block size-2 rounded-full bg-accent" aria-hidden />
-              <span className="font-semibold uppercase">{site.shortName}</span>
-              <span className="text-muted">/ Multimedia</span>
+            <Link href="/" aria-label={site.name} className="inline-flex items-center">
+              <Image
+                src="/logo.svg"
+                alt={site.name}
+                width={320}
+                height={96}
+                className="h-12 w-auto"
+              />
             </Link>
             <p className="mt-6 max-w-sm text-balance text-2xl font-medium leading-snug">
               {site.tagline}

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { featuredWork, services, site } from "@/lib/site";
+import { services, site } from "@/lib/site";
 
 export default function Home() {
   return (
@@ -88,54 +88,6 @@ export default function Home() {
                 <p className="text-sm leading-relaxed text-foreground/70">
                   {service.summary}
                 </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured work */}
-      <section className="border-b border-border/60">
-        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
-          <div className="flex items-end justify-between gap-6">
-            <div>
-              <p className="font-mono text-xs uppercase tracking-widest text-muted">
-                Selected work
-              </p>
-              <h2 className="mt-3 max-w-2xl text-balance text-3xl font-semibold tracking-tight md:text-5xl">
-                Recent projects.
-              </h2>
-            </div>
-            <Link
-              href="/portfolio"
-              className="hidden whitespace-nowrap text-sm text-muted hover:text-accent md:inline-block"
-            >
-              View all →
-            </Link>
-          </div>
-
-          <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {featuredWork.map((work) => (
-              <article
-                key={work.title}
-                className={`group relative flex flex-col justify-end overflow-hidden rounded-xl border border-border bg-gradient-to-br from-zinc-900 to-zinc-950 p-6 ${work.aspect}`}
-              >
-                <div className="relative z-10">
-                  <p className="font-mono text-xs uppercase tracking-widest text-accent">
-                    {work.category}
-                  </p>
-                  <h3 className="mt-2 text-lg font-medium tracking-tight">
-                    {work.title}
-                  </h3>
-                </div>
-                <div
-                  className="absolute inset-0 opacity-30 transition group-hover:opacity-50"
-                  style={{
-                    backgroundImage:
-                      "radial-gradient(circle at 30% 20%, rgba(212,164,71,0.25), transparent 50%), radial-gradient(circle at 70% 80%, rgba(212,164,71,0.15), transparent 50%)",
-                  }}
-                  aria-hidden
-                />
               </article>
             ))}
           </div>

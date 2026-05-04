@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { navLinks, site } from "@/lib/site";
 
@@ -59,12 +60,17 @@ export function MobileMenu() {
           <div className="flex h-16 items-center justify-between border-b border-border/60 px-6">
             <Link
               href="/"
+              aria-label={site.name}
               onClick={() => setOpen(false)}
-              className="flex items-center gap-2 font-mono text-sm tracking-widest"
+              className="inline-flex items-center"
             >
-              <span className="inline-block size-2 rounded-full bg-accent" aria-hidden />
-              <span className="font-semibold uppercase">{site.shortName}</span>
-              <span className="text-muted">/ Multimedia</span>
+              <Image
+                src="/logo.svg"
+                alt={site.name}
+                width={320}
+                height={96}
+                className="h-9 w-auto"
+              />
             </Link>
             <button
               type="button"
