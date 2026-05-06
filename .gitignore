@@ -39,6 +39,8 @@ yarn-error.log*
 
 # raw brand source files kept locally, not shipped
 /public/KM LOGO*
+/public/hero image*
+/public/image.png
 
 # typescript
 *.tsbuildinfo

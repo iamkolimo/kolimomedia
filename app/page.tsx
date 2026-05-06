@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { services, site } from "@/lib/site";
 
 export default function Home() {
@@ -6,37 +7,63 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-border/60">
-        <div className="mx-auto max-w-7xl px-6 pb-24 pt-20 lg:px-10 lg:pb-32 lg:pt-32">
-          <p className="font-mono text-xs uppercase tracking-widest text-muted">
-            Multimedia studio · {site.location} · est. {site.founded}
-          </p>
-          <h1 className="mt-6 max-w-4xl text-balance text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl lg:text-[5.5rem]">
-            Visual stories for{" "}
-            <span className="text-accent">brands worth</span> watching.
-          </h1>
-          <p className="mt-8 max-w-xl text-lg leading-relaxed text-foreground/80">
-            We help organisations sharpen how they look, sound, and move —
-            through branding, photography, video, and design. One studio, many
-            tools, a single voice.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-3">
-            <Link
-              href="/contact"
-              className="inline-flex h-12 items-center gap-2 rounded-full bg-accent px-6 text-sm font-medium text-accent-foreground transition hover:opacity-90"
-            >
-              Start a project
-              <span aria-hidden>→</span>
-            </Link>
-            <Link
-              href="/portfolio"
-              className="inline-flex h-12 items-center gap-2 rounded-full border border-border px-6 text-sm font-medium transition hover:border-accent hover:text-accent"
-            >
-              See our work
-            </Link>
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="grid items-center gap-12 pb-20 pt-20 lg:grid-cols-12 lg:gap-12 lg:pb-28 lg:pt-28">
+            <div className="lg:col-span-7">
+              <p className="font-mono text-xs uppercase tracking-widest text-muted">
+                Multimedia studio · {site.location} · est. {site.founded}
+              </p>
+              <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+                Visual stories for{" "}
+                <span className="text-accent">brands worth</span> watching.
+              </h1>
+              <p className="mt-8 max-w-xl text-lg leading-relaxed text-foreground/80">
+                We help organisations sharpen how they look, sound, and move —
+                through branding, photography, video, and design. One studio,
+                many tools, a single voice.
+              </p>
+              <div className="mt-10 flex flex-wrap gap-3">
+                <Link
+                  href="/contact"
+                  className="inline-flex h-12 items-center gap-2 rounded-full bg-accent px-6 text-sm font-medium text-accent-foreground transition hover:opacity-90"
+                >
+                  Start a project
+                  <span aria-hidden>→</span>
+                </Link>
+                <Link
+                  href="/portfolio"
+                  className="inline-flex h-12 items-center gap-2 rounded-full border border-border px-6 text-sm font-medium transition hover:border-accent hover:text-accent"
+                >
+                  See our work
+                </Link>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-border bg-zinc-950 lg:aspect-[4/5]">
+                <Image
+                  src="/hero.jpg"
+                  alt="Behind the scenes at a Kolimo Multimedia shoot"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  className="object-cover"
+                />
+                {/* Subtle gradient to deepen the bottom edge */}
+                <div
+                  className="pointer-events-none absolute inset-0"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.35) 100%)",
+                  }}
+                  aria-hidden
+                />
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Decorative grid */}
+        {/* Decorative grid behind everything */}
         <div
           className="pointer-events-none absolute inset-0 -z-10 opacity-[0.04]"
           style={{
