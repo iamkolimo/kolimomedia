@@ -1,5 +1,5 @@
-import Link from "next/link";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Work",
@@ -7,99 +7,107 @@ export const metadata: Metadata = {
     "Selected work from Kolimo Multimedia — production, digital marketing, creative direction, and web/app projects.",
 };
 
-const projects = [
-  { title: "Project Title 01", category: "Creative Direction", year: "2026", aspect: "aspect-[4/5]" },
-  { title: "Project Title 02", category: "Production", year: "2026", aspect: "aspect-[16/10]" },
-  { title: "Project Title 03", category: "Production", year: "2025", aspect: "aspect-[1/1]" },
-  { title: "Project Title 04", category: "Digital Marketing", year: "2025", aspect: "aspect-[16/10]" },
-  { title: "Project Title 05", category: "Web & App Solutions", year: "2025", aspect: "aspect-[4/5]" },
-  { title: "Project Title 06", category: "Digital Marketing", year: "2024", aspect: "aspect-[1/1]" },
-  { title: "Project Title 07", category: "Creative Direction", year: "2024", aspect: "aspect-[16/10]" },
-  { title: "Project Title 08", category: "Production", year: "2024", aspect: "aspect-[4/5]" },
-  { title: "Project Title 09", category: "Web & App Solutions", year: "2023", aspect: "aspect-[1/1]" },
-];
-
-const categories = [
-  "All",
-  "Production",
-  "Digital Marketing",
-  "Creative Direction",
-  "Web & App Solutions",
-];
-
 export default function PortfolioPage() {
   return (
     <>
+      {/* Hero */}
       <section className="border-b border-border/60">
-        <div className="mx-auto max-w-7xl px-6 pb-20 pt-20 lg:px-10 lg:pb-28 lg:pt-32">
+        <div className="mx-auto max-w-7xl px-6 pb-12 pt-20 lg:px-10 lg:pb-16 lg:pt-32">
           <p className="font-mono text-xs uppercase tracking-widest text-muted">
             Work
           </p>
           <h1 className="mt-4 max-w-4xl text-balance text-4xl font-semibold tracking-tight md:text-6xl">
-            Selected projects from across the studio.
+            Selected projects.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground/80">
-            A cross-section of work from the past three years. Production,
-            marketing, creative direction, and the in-between.
+            A snapshot of recent work — one piece in motion, four in stillness.
           </p>
+        </div>
+      </section>
 
-          <div className="mt-10 flex flex-wrap gap-2">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                type="button"
-                className="rounded-full border border-border px-4 py-1.5 text-sm text-foreground/70 transition hover:border-accent hover:text-accent"
-              >
-                {cat}
-              </button>
-            ))}
+      {/* Showcase: vertical video + stack of four photos */}
+      <section>
+        <div className="mx-auto max-w-7xl px-6 py-12 lg:px-10 lg:py-20">
+          <div className="grid gap-4 lg:grid-cols-[5fr_7fr]">
+            {/* Vertical 9:16 video.  Drop a real file at /portfolio/showreel.mp4 to swap. */}
+            <figure className="relative aspect-[9/16] overflow-hidden rounded-xl border border-border bg-gradient-to-br from-zinc-900 to-zinc-950">
+              {/* Replace this block with:
+                   <video
+                     src="/portfolio/showreel.mp4"
+                     poster="/portfolio/showreel-poster.jpg"
+                     autoPlay
+                     muted
+                     loop
+                     playsInline
+                     className="absolute inset-0 h-full w-full object-cover"
+                   />
+                  when the video file lands in /public/portfolio/. */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
+                <span className="font-mono text-xs uppercase tracking-widest text-muted">
+                  Vertical reel
+                </span>
+                <span className="font-mono text-[10px] tracking-widest text-muted/60">
+                  9 : 16
+                </span>
+              </div>
+              <div
+                className="pointer-events-none absolute inset-0 opacity-30"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(circle at 30% 20%, rgba(212,164,71,0.25), transparent 50%), radial-gradient(circle at 70% 80%, rgba(212,164,71,0.15), transparent 50%)",
+                }}
+                aria-hidden
+              />
+            </figure>
+
+            {/* Stack of four photos.  Each tile mirrors the row height of the video. */}
+            <div className="grid gap-4 lg:grid-rows-4">
+              {[1, 2, 3, 4].map((n) => (
+                <figure
+                  key={n}
+                  className="relative aspect-[3/2] overflow-hidden rounded-xl border border-border bg-gradient-to-br from-zinc-900 to-zinc-950 lg:aspect-auto"
+                >
+                  {/* Replace with:
+                       <Image
+                         src={`/portfolio/photo-0${n}.jpg`}
+                         alt="..."
+                         fill
+                         className="object-cover"
+                       />
+                      when assets land in /public/portfolio/. */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="font-mono text-xs uppercase tracking-widest text-muted">
+                      Photo 0{n}
+                    </span>
+                  </div>
+                  <div
+                    className="pointer-events-none absolute inset-0 opacity-30"
+                    style={{
+                      backgroundImage:
+                        "radial-gradient(circle at 25% 25%, rgba(212,164,71,0.18), transparent 55%), radial-gradient(circle at 80% 80%, rgba(212,164,71,0.1), transparent 50%)",
+                    }}
+                    aria-hidden
+                  />
+                </figure>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section>
+      {/* CTA */}
+      <section className="border-t border-border/60">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((p) => (
-              <article
-                key={p.title}
-                className={`group relative flex flex-col justify-end overflow-hidden rounded-xl border border-border bg-gradient-to-br from-zinc-900 to-zinc-950 p-6 ${p.aspect}`}
-              >
-                <div className="relative z-10">
-                  <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-accent">
-                    <span>{p.category}</span>
-                    <span className="text-muted">·</span>
-                    <span className="text-muted">{p.year}</span>
-                  </div>
-                  <h3 className="mt-2 text-lg font-medium tracking-tight">
-                    {p.title}
-                  </h3>
-                </div>
-                <div
-                  className="absolute inset-0 opacity-30 transition group-hover:opacity-50"
-                  style={{
-                    backgroundImage:
-                      "radial-gradient(circle at 30% 20%, rgba(212,164,71,0.25), transparent 50%), radial-gradient(circle at 70% 80%, rgba(212,164,71,0.15), transparent 50%)",
-                  }}
-                  aria-hidden
-                />
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-20 rounded-2xl border border-dashed border-border p-10 text-center">
-            <p className="font-mono text-xs uppercase tracking-widest text-muted">
-              Placeholder
-            </p>
-            <p className="mx-auto mt-3 max-w-md text-foreground/70">
-              Replace these tiles with your actual project images and details.
-              Each tile can link to a case-study page.
+          <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
+            <p className="max-w-md text-balance text-lg text-foreground/80">
+              Have a project that needs the same treatment? We&apos;d love to
+              read the brief.
             </p>
             <Link
               href="/contact"
-              className="mt-6 inline-flex h-10 items-center gap-2 rounded-full bg-accent px-5 text-sm font-medium text-accent-foreground transition hover:opacity-90"
+              className="inline-flex h-12 items-center gap-2 whitespace-nowrap rounded-full bg-accent px-6 text-sm font-medium text-accent-foreground transition hover:opacity-90"
             >
-              Commission a project
+              Start a project
               <span aria-hidden>→</span>
             </Link>
           </div>
