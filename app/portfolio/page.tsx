@@ -17,10 +17,11 @@ export default function PortfolioPage() {
             Work
           </p>
           <h1 className="mt-4 max-w-4xl text-balance text-4xl font-semibold tracking-tight md:text-6xl">
-            Selected projects.
+            Selected projects from across the studio.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground/80">
-            A snapshot of recent work — one piece in motion, four in stillness.
+            A cross-section of work from the past three years. Production,
+            marketing, creative direction, and the in-between.
           </p>
         </div>
       </section>
