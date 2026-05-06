@@ -59,8 +59,8 @@ export default function Home() {
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-foreground/80">
               We help organisations sharpen how they look, sound, and move —
-              through branding, photography, video, and design. One studio,
-              many tools, a single voice.
+              across video, photography, digital marketing, creative direction
+              and web. One studio, many tools, a single voice.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Link
@@ -90,7 +90,7 @@ export default function Home() {
                 What we do
               </p>
               <h2 className="mt-3 max-w-2xl text-balance text-3xl font-semibold tracking-tight md:text-5xl">
-                Six disciplines, working together.
+                Four disciplines, one studio.
               </h2>
             </div>
             <Link
@@ -101,7 +101,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2">
             {services.map((service, i) => (
               <article
                 key={service.slug}

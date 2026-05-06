@@ -27,54 +27,51 @@ export const navLinks = [
 
 export const services = [
   {
-    slug: "branding",
-    title: "Branding & Creative Direction",
+    slug: "video-photography",
+    title: "Video & Photography",
     summary:
-      "Logos, identity systems, and the strategy that keeps every touchpoint feeling like one brand.",
-    deliverables: ["Logo & identity", "Brand guidelines", "Naming", "Art direction"],
+      "Brand films, commercials, photoshoots and social cutdowns. We bring the cameras, the crew, and the story.",
+    deliverables: [
+      "Brand films & commercials",
+      "Editorial & product shoots",
+      "Events & portraits",
+      "Social cutdowns",
+    ],
   },
   {
-    slug: "photography",
-    title: "Photography",
+    slug: "digital-marketing",
+    title: "Digital Marketing",
     summary:
-      "Editorial, product, portrait, event. Photographs that earn a second look.",
-    deliverables: ["Editorial shoots", "Product photography", "Portraits", "Events"],
+      "Channel strategy, content systems and paid campaigns to put your work in front of the right audience.",
+    deliverables: [
+      "Social management",
+      "Paid media",
+      "Content strategy",
+      "Analytics & reporting",
+    ],
   },
   {
-    slug: "videography",
-    title: "Videography",
+    slug: "creative-direction",
+    title: "Creative Direction",
     summary:
-      "From thirty-second cutdowns to long-form brand films. Story first, then the camera.",
-    deliverables: ["Brand films", "Commercials", "Social cutdowns", "Documentary"],
+      "Identity, art direction and the strategic thinking that keeps every touchpoint feeling like one brand.",
+    deliverables: [
+      "Brand identity",
+      "Guidelines & systems",
+      "Art direction",
+      "Naming & messaging",
+    ],
   },
   {
-    slug: "3d-animation",
-    title: "3D & Animation",
+    slug: "web-app-solutions",
+    title: "Web & App Solutions",
     summary:
-      "Motion design, product visualisation, and animated brand systems that move with intent.",
-    deliverables: ["Motion graphics", "3D product viz", "Animated logos", "Explainers"],
+      "Marketing sites, landing pages and mobile apps. Fast, considered, and built to convert.",
+    deliverables: [
+      "Marketing sites",
+      "Landing pages",
+      "Mobile apps",
+      "E-commerce & CMS",
+    ],
   },
-  {
-    slug: "web-design",
-    title: "Web Design",
-    summary:
-      "Sites that load fast, look considered, and convert visitors into clients.",
-    deliverables: ["Marketing sites", "Portfolios", "Landing pages", "CMS"],
-  },
-  {
-    slug: "social-media",
-    title: "Social Media",
-    summary:
-      "Content systems and campaign work for brands that want to show up consistently.",
-    deliverables: ["Content strategy", "Channel management", "Campaigns", "Reporting"],
-  },
-] as const;
-
-export const featuredWork = [
-  { title: "Project Title 01", category: "Branding", aspect: "aspect-[4/5]" },
-  { title: "Project Title 02", category: "Photography", aspect: "aspect-[16/10]" },
-  { title: "Project Title 03", category: "Videography", aspect: "aspect-[1/1]" },
-  { title: "Project Title 04", category: "3D & Animation", aspect: "aspect-[16/10]" },
-  { title: "Project Title 05", category: "Web Design", aspect: "aspect-[4/5]" },
-  { title: "Project Title 06", category: "Social Media", aspect: "aspect-[1/1]" },
 ] as const;

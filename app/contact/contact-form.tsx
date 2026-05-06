@@ -4,12 +4,10 @@ import { useActionState } from "react";
 import { submitContact, type ContactState } from "./actions";
 
 const PROJECT_TYPES = [
-  "Branding",
-  "Photography",
-  "Videography",
-  "3D & Animation",
-  "Web Design",
-  "Social Media",
+  "Video & Photography",
+  "Digital Marketing",
+  "Creative Direction",
+  "Web & App Solutions",
   "Other",
 ] as const;
 

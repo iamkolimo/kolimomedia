@@ -16,16 +16,16 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Kolimo Multimedia — Branding, photography & visual stories from Abuja",
+    default: "Kolimo Multimedia — Visual stories for brands worth watching",
     template: "%s — Kolimo Multimedia",
   },
   description:
-    "A multimedia agency in Abuja, Nigeria. Branding, photography, videography, 3D & animation, web design and social media — building brands since 2014.",
+    "A multimedia studio in Abuja, Nigeria. Video & photography, digital marketing, creative direction, and web/app solutions — building brands since 2014.",
   metadataBase: new URL("https://kolimomedia.com"),
   openGraph: {
     title: "Kolimo Multimedia",
     description:
-      "Branding, photography & visual stories from Abuja. Building brands since 2014.",
+      "Visual stories for brands worth watching. A multimedia studio in Abuja since 2014.",
     url: "https://kolimomedia.com",
     siteName: "Kolimo Multimedia",
     type: "website",

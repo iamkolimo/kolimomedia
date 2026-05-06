@@ -5,7 +5,7 @@ import { services } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Branding, photography, videography, 3D & animation, web design, and social media — six disciplines under one roof.",
+    "Video & photography, digital marketing, creative direction, and web/app solutions — four disciplines under one roof.",
 };
 
 export default function ServicesPage() {
@@ -17,7 +17,7 @@ export default function ServicesPage() {
             Services
           </p>
           <h1 className="mt-4 max-w-4xl text-balance text-4xl font-semibold tracking-tight md:text-6xl">
-            One studio. Six disciplines that talk to each other.
+            One studio. Four disciplines that talk to each other.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground/80">
             We pick the right combination for the job — sometimes one service is

@@ -4,22 +4,28 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Selected work from Kolimo Multimedia — branding, photography, video, 3D, and web projects.",
+    "Selected work from Kolimo Multimedia — video, photography, digital marketing, creative direction, and web/app projects.",
 };
 
 const projects = [
-  { title: "Project Title 01", category: "Branding", year: "2026", aspect: "aspect-[4/5]" },
-  { title: "Project Title 02", category: "Photography", year: "2026", aspect: "aspect-[16/10]" },
-  { title: "Project Title 03", category: "Videography", year: "2025", aspect: "aspect-[1/1]" },
-  { title: "Project Title 04", category: "3D & Animation", year: "2025", aspect: "aspect-[16/10]" },
-  { title: "Project Title 05", category: "Web Design", year: "2025", aspect: "aspect-[4/5]" },
-  { title: "Project Title 06", category: "Social Media", year: "2024", aspect: "aspect-[1/1]" },
-  { title: "Project Title 07", category: "Branding", year: "2024", aspect: "aspect-[16/10]" },
-  { title: "Project Title 08", category: "Photography", year: "2024", aspect: "aspect-[4/5]" },
-  { title: "Project Title 09", category: "Videography", year: "2023", aspect: "aspect-[1/1]" },
+  { title: "Project Title 01", category: "Creative Direction", year: "2026", aspect: "aspect-[4/5]" },
+  { title: "Project Title 02", category: "Video & Photography", year: "2026", aspect: "aspect-[16/10]" },
+  { title: "Project Title 03", category: "Video & Photography", year: "2025", aspect: "aspect-[1/1]" },
+  { title: "Project Title 04", category: "Digital Marketing", year: "2025", aspect: "aspect-[16/10]" },
+  { title: "Project Title 05", category: "Web & App Solutions", year: "2025", aspect: "aspect-[4/5]" },
+  { title: "Project Title 06", category: "Digital Marketing", year: "2024", aspect: "aspect-[1/1]" },
+  { title: "Project Title 07", category: "Creative Direction", year: "2024", aspect: "aspect-[16/10]" },
+  { title: "Project Title 08", category: "Video & Photography", year: "2024", aspect: "aspect-[4/5]" },
+  { title: "Project Title 09", category: "Web & App Solutions", year: "2023", aspect: "aspect-[1/1]" },
 ];
 
-const categories = ["All", "Branding", "Photography", "Videography", "3D & Animation", "Web Design", "Social Media"];
+const categories = [
+  "All",
+  "Video & Photography",
+  "Digital Marketing",
+  "Creative Direction",
+  "Web & App Solutions",
+];
 
 export default function PortfolioPage() {
   return (
@@ -33,8 +39,8 @@ export default function PortfolioPage() {
             Selected projects from across the studio.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground/80">
-            A cross-section of work from the past three years. Photography,
-            video, branding, 3D, and the in-between.
+            A cross-section of work from the past three years. Video,
+            photography, marketing, creative direction, and the in-between.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-2">

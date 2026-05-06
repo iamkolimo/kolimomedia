@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Tell us about your project. Branding, photography, video, 3D, web, or social — we'd love to hear about it.",
+    "Tell us about your project. Video, photography, marketing, creative direction, web or app — we'd love to hear about it.",
 };
 
 export default function ContactPage() {

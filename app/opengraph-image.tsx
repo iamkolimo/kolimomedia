@@ -76,7 +76,7 @@ export default function OG() {
             maxWidth: 900,
           }}
         >
-          {`A multimedia studio in ${site.location}. Branding, photography, video, and design — since ${site.founded}.`}
+          {`A multimedia studio in ${site.location}. Video, photography, marketing, and creative direction — since ${site.founded}.`}
         </div>
 
         {/* Footer pinned to bottom via marginTop: auto */}

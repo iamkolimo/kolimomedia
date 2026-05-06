@@ -41,8 +41,9 @@ export default function AboutPage() {
                 Kolimo Multimedia was founded in {site.founded} as a one-stop
                 shop for organisations that want to build their brand and reach
                 their audience. We pair strategic thinking with serious craft —
-                photography, video, branding, 3D, web, and social — so every
-                touchpoint pulls in the same direction.
+                video & photography, digital marketing, creative direction, and
+                web & app solutions — so every touchpoint pulls in the same
+                direction.
               </p>
               <p className="mt-6 text-lg leading-relaxed text-foreground/80">
                 We work with brands of all sizes: ambitious local businesses,
@@ -69,7 +70,7 @@ export default function AboutPage() {
                   <dt className="font-mono text-xs uppercase tracking-widest text-muted">
                     Disciplines
                   </dt>
-                  <dd className="mt-2 text-3xl font-semibold">6</dd>
+                  <dd className="mt-2 text-3xl font-semibold">4</dd>
                 </div>
                 <div className="bg-background p-6">
                   <dt className="font-mono text-xs uppercase tracking-widest text-muted">
