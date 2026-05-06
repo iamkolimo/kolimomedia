@@ -6,73 +6,79 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-border/60">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="grid items-center gap-12 pb-20 pt-20 lg:grid-cols-12 lg:gap-12 lg:pb-28 lg:pt-28">
-            <div className="lg:col-span-7">
-              <p className="font-mono text-xs uppercase tracking-widest text-muted">
-                Multimedia studio · {site.location} · est. {site.founded}
-              </p>
-              <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
-                Visual stories for{" "}
-                <span className="text-accent">brands worth</span> watching.
-              </h1>
-              <p className="mt-8 max-w-xl text-lg leading-relaxed text-foreground/80">
-                We help organisations sharpen how they look, sound, and move —
-                through branding, photography, video, and design. One studio,
-                many tools, a single voice.
-              </p>
-              <div className="mt-10 flex flex-wrap gap-3">
-                <Link
-                  href="/contact"
-                  className="inline-flex h-12 items-center gap-2 rounded-full bg-accent px-6 text-sm font-medium text-accent-foreground transition hover:opacity-90"
-                >
-                  Start a project
-                  <span aria-hidden>→</span>
-                </Link>
-                <Link
-                  href="/portfolio"
-                  className="inline-flex h-12 items-center gap-2 rounded-full border border-border px-6 text-sm font-medium transition hover:border-accent hover:text-accent"
-                >
-                  See our work
-                </Link>
-              </div>
-            </div>
+      <section className="relative isolate overflow-hidden border-b border-border/60">
+        {/* Atmospheric photo backdrop — fades into the dark on every edge so it
+            reads as part of the page, not a pasted-on box. */}
+        <div className="absolute inset-0 -z-10" aria-hidden>
+          <Image
+            src="/hero.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[70%_center] lg:object-[65%_center]"
+          />
 
-            <div className="lg:col-span-5">
-              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-border bg-zinc-950 lg:aspect-[4/5]">
-                <Image
-                  src="/hero.jpg"
-                  alt="Behind the scenes at a Kolimo Multimedia shoot"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 42vw"
-                  className="object-cover"
-                />
-                {/* Subtle gradient to deepen the bottom edge */}
-                <div
-                  className="pointer-events-none absolute inset-0"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.35) 100%)",
-                  }}
-                  aria-hidden
-                />
-              </div>
+          {/* Mobile / tablet: dark at top (where text sits), photo softens upward
+              from the bottom. */}
+          <div
+            className="absolute inset-0 lg:hidden"
+            style={{
+              background:
+                "linear-gradient(to bottom, var(--background) 0%, var(--background) 28%, rgba(10,10,10,0.85) 45%, rgba(10,10,10,0.45) 65%, rgba(10,10,10,0.15) 100%)",
+            }}
+          />
+
+          {/* Desktop: dark on the left (where text sits), photo emerges to the right. */}
+          <div
+            className="absolute inset-0 hidden lg:block"
+            style={{
+              background:
+                "linear-gradient(to right, var(--background) 0%, var(--background) 32%, rgba(10,10,10,0.85) 48%, rgba(10,10,10,0.35) 70%, rgba(10,10,10,0.1) 100%)",
+            }}
+          />
+
+          {/* Bottom edge fade — blends into the next section seamlessly. */}
+          <div
+            className="absolute inset-x-0 bottom-0 h-32 lg:h-40"
+            style={{
+              background:
+                "linear-gradient(to bottom, transparent, var(--background))",
+            }}
+          />
+        </div>
+
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="flex min-h-[78vh] flex-col justify-end pb-20 pt-32 lg:min-h-[82vh] lg:max-w-2xl lg:justify-center lg:pb-32 lg:pt-32">
+            <p className="font-mono text-xs uppercase tracking-widest text-muted">
+              Multimedia studio · {site.location} · est. {site.founded}
+            </p>
+            <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+              Visual stories for{" "}
+              <span className="text-accent">brands worth</span> watching.
+            </h1>
+            <p className="mt-8 max-w-xl text-lg leading-relaxed text-foreground/80">
+              We help organisations sharpen how they look, sound, and move —
+              through branding, photography, video, and design. One studio,
+              many tools, a single voice.
+            </p>
+            <div className="mt-10 flex flex-wrap gap-3">
+              <Link
+                href="/contact"
+                className="inline-flex h-12 items-center gap-2 rounded-full bg-accent px-6 text-sm font-medium text-accent-foreground transition hover:opacity-90"
+              >
+                Start a project
+                <span aria-hidden>→</span>
+              </Link>
+              <Link
+                href="/portfolio"
+                className="inline-flex h-12 items-center gap-2 rounded-full border border-border px-6 text-sm font-medium transition hover:border-accent hover:text-accent"
+              >
+                See our work
+              </Link>
             </div>
           </div>
         </div>
-
-        {/* Decorative grid behind everything */}
-        <div
-          className="pointer-events-none absolute inset-0 -z-10 opacity-[0.04]"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
-          }}
-          aria-hidden
-        />
       </section>
 
       {/* Services */}
