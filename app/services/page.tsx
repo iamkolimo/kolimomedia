@@ -5,7 +5,7 @@ import { services } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Video & photography, digital marketing, creative direction, and web/app solutions — four disciplines under one roof.",
+    "Production, digital marketing, creative direction, and web/app solutions — four disciplines under one roof.",
 };
 
 export default function ServicesPage() {

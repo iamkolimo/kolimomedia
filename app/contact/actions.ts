@@ -8,7 +8,7 @@ export type ContactState =
   | { status: "error"; message: string };
 
 const PROJECT_TYPES = [
-  "Video & Photography",
+  "Production",
   "Digital Marketing",
   "Creative Direction",
   "Web & App Solutions",

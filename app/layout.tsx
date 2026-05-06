@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s — Kolimo Multimedia",
   },
   description:
-    "A multimedia studio in Abuja, Nigeria. Video & photography, digital marketing, creative direction, and web/app solutions — building brands since 2014.",
+    "A multimedia studio in Abuja, Nigeria. Production, digital marketing, creative direction, and web/app solutions — building brands since 2014.",
   metadataBase: new URL("https://kolimomedia.com"),
   openGraph: {
     title: "Kolimo Multimedia",

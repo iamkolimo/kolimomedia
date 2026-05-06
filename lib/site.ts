@@ -27,8 +27,8 @@ export const navLinks = [
 
 export const services = [
   {
-    slug: "video-photography",
-    title: "Video & Photography",
+    slug: "production",
+    title: "Production",
     summary:
       "Brand films, commercials, photoshoots and social cutdowns. We bring the cameras, the crew, and the story.",
     deliverables: [

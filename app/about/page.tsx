@@ -41,8 +41,8 @@ export default function AboutPage() {
                 Kolimo Multimedia was founded in {site.founded} as a one-stop
                 shop for organisations that want to build their brand and reach
                 their audience. We pair strategic thinking with serious craft —
-                video & photography, digital marketing, creative direction, and
-                web & app solutions — so every touchpoint pulls in the same
+                production, digital marketing, creative direction, and web &
+                app solutions — so every touchpoint pulls in the same
                 direction.
               </p>
               <p className="mt-6 text-lg leading-relaxed text-foreground/80">

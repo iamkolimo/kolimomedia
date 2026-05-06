@@ -59,8 +59,8 @@ export default function Home() {
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-foreground/80">
               We help organisations sharpen how they look, sound, and move —
-              across video, photography, digital marketing, creative direction
-              and web. One studio, many tools, a single voice.
+              across production, digital marketing, creative direction and
+              web. One studio, many tools, a single voice.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Link
