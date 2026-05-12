@@ -3,9 +3,10 @@ import type { Metadata } from "next";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About — A Creative Agency in Abuja, Nigeria",
   description:
-    "Kolimo Multimedia is a creative studio in Abuja, Nigeria. Building brands through photography, video, branding, and design since 2014.",
+    "Kolimo Multimedia is a creative agency and media company in Abuja, Nigeria. Building brands through photography, video, branding, digital marketing, and web design since 2014.",
+  alternates: { canonical: "/about" },
 };
 
 const principles = [
@@ -38,9 +39,10 @@ export default function AboutPage() {
           <div className="mt-12 grid gap-12 md:grid-cols-12">
             <div className="md:col-span-7">
               <p className="text-lg leading-relaxed text-foreground/80">
-                Kolimo Multimedia was founded in {site.founded} as a one-stop
-                shop for organisations that want to build their brand and reach
-                their audience. We pair strategic thinking with serious craft —
+                Kolimo Multimedia is a creative agency and media company
+                founded in {site.founded} — a one-stop shop for organisations
+                across Nigeria that want to build their brand and reach their
+                audience. We pair strategic thinking with serious craft —
                 production, digital marketing, creative direction, and web &
                 app solutions — so every touchpoint pulls in the same
                 direction.
