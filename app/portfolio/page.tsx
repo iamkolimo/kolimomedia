@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ShowreelPlayer } from "./showreel-player";
 
 export const metadata: Metadata = {
   title: "Work",
@@ -30,35 +31,9 @@ export default function PortfolioPage() {
       <section>
         <div className="mx-auto max-w-7xl px-6 py-12 lg:px-10 lg:py-20">
           <div className="grid gap-4 lg:grid-cols-[5fr_7fr]">
-            {/* Vertical 9:16 video.  Drop a real file at /portfolio/showreel.mp4 to swap. */}
-            <figure className="relative aspect-[9/16] overflow-hidden rounded-xl border border-border bg-gradient-to-br from-zinc-900 to-zinc-950">
-              {/* Replace this block with:
-                   <video
-                     src="/portfolio/showreel.mp4"
-                     poster="/portfolio/showreel-poster.jpg"
-                     autoPlay
-                     muted
-                     loop
-                     playsInline
-                     className="absolute inset-0 h-full w-full object-cover"
-                   />
-                  when the video file lands in /public/portfolio/. */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
-                <span className="font-mono text-xs uppercase tracking-widest text-muted">
-                  Vertical reel
-                </span>
-                <span className="font-mono text-[10px] tracking-widest text-muted/60">
-                  9 : 16
-                </span>
-              </div>
-              <div
-                className="pointer-events-none absolute inset-0 opacity-30"
-                style={{
-                  backgroundImage:
-                    "radial-gradient(circle at 30% 20%, rgba(212,164,71,0.25), transparent 50%), radial-gradient(circle at 70% 80%, rgba(212,164,71,0.15), transparent 50%)",
-                }}
-                aria-hidden
-              />
+            {/* Vertical 9:16 reel — hosted on Mux. */}
+            <figure className="relative aspect-[9/16] overflow-hidden rounded-xl border border-border bg-black">
+              <ShowreelPlayer playbackId="00QItCw01SzTNB9SIDfJB3A4RihSIg6mgrN5W5ZdbvS5Q" />
             </figure>
 
             {/* Stack of four photos.  Each tile mirrors the row height of the video. */}
