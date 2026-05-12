@@ -1,5 +1,7 @@
 "use server";
 
+import { getResend, renderContactEmail } from "@/lib/resend";
+import { site } from "@/lib/site";
 import { getSupabase } from "@/lib/supabase";
 
 export type ContactState =
@@ -51,8 +53,38 @@ export async function submitContact(
   if (error) {
     return {
       status: "error",
-      message: "Something went wrong saving your message. Please try again or email us directly.",
+      message:
+        "Something went wrong saving your message. Please try again or email us directly.",
     };
+  }
+
+  // Notify the studio inbox. Best-effort: the lead is already safe in Supabase,
+  // so we don't fail the form if the email send is misconfigured.
+  const resend = getResend();
+  if (resend) {
+    const { subject, html, text } = renderContactEmail({
+      name,
+      email,
+      company,
+      projectType: projectType || null,
+      message,
+    });
+    try {
+      await resend.emails.send({
+        from: "Kolimo Contact Form <onboarding@resend.dev>",
+        to: site.notificationEmail,
+        replyTo: email,
+        subject,
+        html,
+        text,
+      });
+    } catch (e) {
+      console.error("[contact] Failed to send notification email:", e);
+    }
+  } else {
+    console.warn(
+      "[contact] RESEND_API_KEY not set — submission saved to Supabase but no notification email sent."
+    );
   }
 
   return { status: "success" };

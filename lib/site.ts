@@ -8,6 +8,7 @@ export const site = {
   shortDescription:
     "A multimedia studio in Abuja. We build brands through photography, video, branding, and design — since 2014.",
   email: "hello@kolimomedia.com",
+  notificationEmail: "kolimomedia@gmail.com",
   location: "Abuja, Nigeria",
   founded: 2014,
   address: {
