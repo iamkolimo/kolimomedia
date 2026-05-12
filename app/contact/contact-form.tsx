@@ -35,6 +35,25 @@ export function ContactForm() {
 
   return (
     <form action={formAction} className="space-y-6">
+      {/* Honeypot — visually hidden, off-screen, skipped by keyboard and screen
+          readers. Real users never see it; bots that fill every input get
+          silently dropped by the action. */}
+      <div
+        className="pointer-events-none absolute left-[-9999px] top-auto h-px w-px overflow-hidden"
+        aria-hidden
+      >
+        <label>
+          Website
+          <input
+            type="text"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+            defaultValue=""
+          />
+        </label>
+      </div>
+
       <div className="grid gap-6 md:grid-cols-2">
         <Field label="Your name" name="name" required autoComplete="name" />
         <Field
