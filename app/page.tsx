@@ -12,7 +12,7 @@ export default function Home() {
         <div className="absolute inset-0 -z-10" aria-hidden>
           <Image
             src="/hero.jpg"
-            alt=""
+            alt="Behind the scenes at Kolimo Multimedia, a creative agency in Abuja, Nigeria."
             fill
             priority
             sizes="100vw"
@@ -51,7 +51,8 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="flex min-h-[78vh] flex-col justify-end pb-20 pt-32 lg:min-h-[82vh] lg:max-w-2xl lg:justify-center lg:pb-32 lg:pt-32">
             <p className="font-mono text-xs uppercase tracking-widest text-muted">
-              Multimedia studio · {site.location} · est. {site.founded}
+              Creative agency &amp; media company · {site.location} · est.{" "}
+              {site.founded}
             </p>
             <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
               Visual stories for{" "}

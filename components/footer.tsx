@@ -44,14 +44,19 @@ export function Footer() {
             <h3 className="text-xs font-semibold uppercase tracking-widest text-muted">
               Get in touch
             </h3>
-            <ul className="mt-4 space-y-2 text-sm">
-              <li>
-                <a href={`mailto:${site.email}`} className="hover:text-accent">
-                  {site.email}
-                </a>
-              </li>
-              <li className="text-muted">{site.location}</li>
-            </ul>
+            <address className="not-italic">
+              <ul className="mt-4 space-y-2 text-sm">
+                <li>
+                  <a
+                    href={`mailto:${site.email}`}
+                    className="hover:text-accent"
+                  >
+                    {site.email}
+                  </a>
+                </li>
+                <li className="text-muted">{site.location}</li>
+              </ul>
+            </address>
 
             <div className="mt-6 flex flex-wrap gap-3 text-sm">
               <a

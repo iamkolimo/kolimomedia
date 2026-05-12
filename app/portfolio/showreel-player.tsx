@@ -1,14 +1,13 @@
 "use client";
 
-import MuxPlayer from "@mux/mux-player-react";
-import type { CSSProperties } from "react";
+import MuxPlayer, { type MuxCSSProperties } from "@mux/mux-player-react";
 
-const playerStyle = {
+const playerStyle: MuxCSSProperties = {
   "--controls": "none",
   "--media-object-fit": "cover",
   height: "100%",
   width: "100%",
-} as CSSProperties;
+};
 
 export function ShowreelPlayer({ playbackId }: { playbackId: string }) {
   return (

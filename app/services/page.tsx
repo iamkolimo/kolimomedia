@@ -3,9 +3,10 @@ import type { Metadata } from "next";
 import { services } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Creative Agency Services in Nigeria",
   description:
-    "Production, digital marketing, creative direction, and web/app solutions — four disciplines under one roof.",
+    "Creative agency services from Abuja, Nigeria — brand films, photography, digital marketing, branding, creative direction, and web design. Four disciplines under one roof.",
+  alternates: { canonical: "/services" },
 };
 
 export default function ServicesPage() {
@@ -20,9 +21,10 @@ export default function ServicesPage() {
             One studio. Four disciplines that talk to each other.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground/80">
-            We pick the right combination for the job — sometimes one service is
-            enough, sometimes the whole stack pulls together. Either way,
-            you&apos;re working with one team.
+            A creative agency and media company in Abuja, Nigeria. We pick the
+            right combination for the job — sometimes one service is enough,
+            sometimes the whole stack pulls together. Either way, you&apos;re
+            working with one team.
           </p>
         </div>
       </section>
