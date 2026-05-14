@@ -14,26 +14,32 @@ const photos = [
   {
     src: "/portfolio/photo-01.jpg",
     alt: "Founder mapping truck-centre logistics on a whiteboard — Moniepoint brand film.",
+    portrait: false,
   },
   {
     src: "/portfolio/photo-02.jpg",
     alt: "Restaurateur watching the open kitchen at Chef Stone — Moniepoint brand film.",
+    portrait: false,
   },
   {
     src: "/portfolio/photo-03.jpg",
     alt: "Keynote on stage at DevFest Lagos — event coverage.",
+    portrait: false,
   },
   {
     src: "/portfolio/photo-04.jpg",
     alt: "Aerial view of the Lagos waterfront and skyline.",
+    portrait: false,
   },
   {
     src: "/portfolio/photo-05.jpg",
     alt: "Signature cocktail at Marks at the Park — hospitality campaign.",
+    portrait: true,
   },
   {
     src: "/portfolio/photo-06.jpg",
-    alt: "Selected work from the Kolimo Multimedia studio.",
+    alt: "Guests toasting over dinner at Marks at the Park — hospitality campaign.",
+    portrait: true,
   },
 ];
 
@@ -65,12 +71,15 @@ export default function PortfolioPage() {
               <ShowreelPlayer playbackId="00QItCw01SzTNB9SIDfJB3A4RihSIg6mgrN5W5ZdbvS5Q" />
             </figure>
 
-            {/* Six photos in a responsive grid. */}
+            {/* Six photos in a responsive grid — landscape stills up top,
+                portrait stills share the final row as taller tiles. */}
             <div className="grid gap-4 sm:grid-cols-2">
               {photos.map((photo) => (
                 <figure
                   key={photo.src}
-                  className="relative aspect-[3/2] overflow-hidden rounded-xl border border-border bg-gradient-to-br from-zinc-900 to-zinc-950"
+                  className={`relative overflow-hidden rounded-xl border border-border bg-gradient-to-br from-zinc-900 to-zinc-950 ${
+                    photo.portrait ? "aspect-[2/3]" : "aspect-video"
+                  }`}
                 >
                   <Image
                     src={photo.src}
