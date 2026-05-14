@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ShowreelPlayer } from "./showreel-player";
 
@@ -8,6 +9,39 @@ export const metadata: Metadata = {
     "Selected work from Kolimo Multimedia, a creative agency in Abuja, Nigeria — production, digital marketing, creative direction, and web/app projects.",
   alternates: { canonical: "/portfolio" },
 };
+
+const photos = [
+  {
+    src: "/portfolio/photo-01.jpg",
+    alt: "Founder mapping truck-centre logistics on a whiteboard — Moniepoint brand film.",
+    portrait: false,
+  },
+  {
+    src: "/portfolio/photo-02.jpg",
+    alt: "Restaurateur watching the open kitchen at Chef Stone — Moniepoint brand film.",
+    portrait: false,
+  },
+  {
+    src: "/portfolio/photo-03.jpg",
+    alt: "Keynote on stage at DevFest Lagos — event coverage.",
+    portrait: false,
+  },
+  {
+    src: "/portfolio/photo-04.jpg",
+    alt: "Aerial view of the Lagos waterfront and skyline.",
+    portrait: false,
+  },
+  {
+    src: "/portfolio/photo-05.jpg",
+    alt: "Signature cocktail at Marks at the Park — hospitality campaign.",
+    portrait: true,
+  },
+  {
+    src: "/portfolio/photo-06.jpg",
+    alt: "Guests toasting over dinner at Marks at the Park — hospitality campaign.",
+    portrait: true,
+  },
+];
 
 export default function PortfolioPage() {
   return (
@@ -28,7 +62,7 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* Showcase: vertical video + stack of four photos */}
+      {/* Showcase: vertical video + grid of six photos */}
       <section>
         <div className="mx-auto max-w-7xl px-6 py-12 lg:px-10 lg:py-20">
           <div className="grid gap-4 lg:grid-cols-[5fr_7fr]">
@@ -37,33 +71,22 @@ export default function PortfolioPage() {
               <ShowreelPlayer playbackId="00QItCw01SzTNB9SIDfJB3A4RihSIg6mgrN5W5ZdbvS5Q" />
             </figure>
 
-            {/* Stack of four photos.  Each tile mirrors the row height of the video. */}
-            <div className="grid gap-4 lg:grid-rows-4">
-              {[1, 2, 3, 4].map((n) => (
+            {/* Six photos in a responsive grid — landscape stills up top,
+                portrait stills share the final row as taller tiles. */}
+            <div className="grid gap-4 sm:grid-cols-2">
+              {photos.map((photo) => (
                 <figure
-                  key={n}
-                  className="relative aspect-[3/2] overflow-hidden rounded-xl border border-border bg-gradient-to-br from-zinc-900 to-zinc-950 lg:aspect-auto"
+                  key={photo.src}
+                  className={`relative overflow-hidden rounded-xl border border-border bg-gradient-to-br from-zinc-900 to-zinc-950 ${
+                    photo.portrait ? "aspect-[2/3]" : "aspect-video"
+                  }`}
                 >
-                  {/* Replace with:
-                       <Image
-                         src={`/portfolio/photo-0${n}.jpg`}
-                         alt="..."
-                         fill
-                         className="object-cover"
-                       />
-                      when assets land in /public/portfolio/. */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="font-mono text-xs uppercase tracking-widest text-muted">
-                      Photo 0{n}
-                    </span>
-                  </div>
-                  <div
-                    className="pointer-events-none absolute inset-0 opacity-30"
-                    style={{
-                      backgroundImage:
-                        "radial-gradient(circle at 25% 25%, rgba(212,164,71,0.18), transparent 55%), radial-gradient(circle at 80% 80%, rgba(212,164,71,0.1), transparent 50%)",
-                    }}
-                    aria-hidden
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
+                    className="object-cover"
                   />
                 </figure>
               ))}
