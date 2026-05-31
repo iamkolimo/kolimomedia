@@ -22,9 +22,9 @@ export const posts: JournalPost[] = [
         <p>
           When the right brief lands in our inbox, the project tends to run
           itself. When the wrong one does, we spend the first three weeks
-          redoing it. After ten years of reading briefs from across Nigeria —
+          redoing it. After ten years of reading briefs from across Nigeria,
           from founders, marketing leads, ministries, brands two weeks old and
-          brands two decades in — these are the parts that matter.
+          brands two decades in, these are the parts that matter.
         </p>
 
         <h2>What to put in</h2>
@@ -43,7 +43,7 @@ export const posts: JournalPost[] = [
           A specific person, not a demographic. &ldquo;Office workers,
           25&ndash;45&rdquo; is a hundred million people. &ldquo;Tomi, marketing
           manager at a mid-sized fintech in Lekki who picks reels she&rsquo;s
-          seen on Instagram for inspiration&rdquo; &mdash; now we know who
+          seen on Instagram for inspiration.&rdquo; Now we know who
           we&rsquo;re making this for.
         </p>
 
@@ -74,7 +74,7 @@ export const posts: JournalPost[] = [
           Don&rsquo;t write the storyboard for us. Don&rsquo;t specify the
           music genre, the colour grade, the font. That&rsquo;s our job. If
           you&rsquo;ve already designed the project, you don&rsquo;t need an
-          agency &mdash; you need a vendor.
+          agency. You need a vendor.
         </p>
 
         <h3>A pitch deck for the project.</h3>
@@ -91,7 +91,7 @@ export const posts: JournalPost[] = [
         <h2>What happens after you hit send</h2>
         <p>
           We read it. If something&rsquo;s missing or unclear, we send back one
-          round of questions &mdash; usually within 24 hours. If it&rsquo;s the
+          round of questions, usually within 24 hours. If it&rsquo;s the
           right fit, we propose a scope: timeline, deliverables, cost, and a
           single person who&rsquo;ll own the project from your side and ours.
           If it&rsquo;s not the right fit, we say so, and where possible we

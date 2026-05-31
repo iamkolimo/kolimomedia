@@ -59,7 +59,7 @@ export default function Home() {
               <span className="text-accent">brands worth</span> watching.
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-foreground/80">
-              We help organisations sharpen how they look, sound, and move —
+              We help organisations sharpen how they look, sound, and move
               across production, digital marketing, creative direction and
               web. One studio, many tools, a single voice.
             </p>

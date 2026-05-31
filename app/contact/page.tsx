@@ -3,9 +3,9 @@ import { ContactForm } from "./contact-form";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact — Creative Agency in Abuja, Nigeria",
+  title: "Contact · Creative Agency in Abuja, Nigeria",
   description:
-    "Brief our Abuja studio. Production, digital marketing, creative direction, branding, web or app — we'd love to hear about your project.",
+    "Brief our Abuja studio. Production, digital marketing, creative direction, branding, web or app: we'd love to hear about your project.",
   alternates: { canonical: "/contact" },
 };
 
@@ -22,7 +22,7 @@ export default function ContactPage() {
               Tell us about your project.
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-foreground/80">
-              Big idea, small idea, half-formed idea — we read everything. The
+              Big idea, small idea, half-formed idea: we read everything. The
               more context you can share, the more useful our first reply will
               be.
             </p>

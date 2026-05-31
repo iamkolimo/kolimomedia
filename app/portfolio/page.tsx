@@ -6,7 +6,7 @@ import { ShowreelPlayer } from "./showreel-player";
 export const metadata: Metadata = {
   title: "Selected Work from Our Abuja Studio",
   description:
-    "Selected work from Kolimo Multimedia, a creative agency in Abuja, Nigeria — production, digital marketing, creative direction, and web/app projects.",
+    "Selected work from Kolimo Multimedia, a creative agency in Abuja, Nigeria. Production, digital marketing, creative direction, and web/app projects.",
   alternates: { canonical: "/portfolio" },
 };
 
