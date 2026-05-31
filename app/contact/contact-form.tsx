@@ -23,7 +23,7 @@ export function ContactForm() {
           Message received
         </p>
         <h3 className="mt-3 text-2xl font-semibold tracking-tight">
-          Thanks — we&apos;ll be in touch.
+          Thanks. We&apos;ll be in touch.
         </h3>
         <p className="mt-3 text-foreground/70">
           We read every brief. Expect a reply from a real person within two

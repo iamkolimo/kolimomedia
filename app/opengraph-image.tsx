@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { site } from "@/lib/site";
 
-export const alt = "Kolimo Multimedia — Visual stories for brands worth watching";
+export const alt = "Kolimo Multimedia · Visual stories for brands worth watching";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -76,7 +76,7 @@ export default function OG() {
             maxWidth: 900,
           }}
         >
-          {`A multimedia studio in ${site.location}. Production, marketing, and creative direction — since ${site.founded}.`}
+          {`A multimedia studio in ${site.location}. Production, marketing, and creative direction. Since ${site.founded}.`}
         </div>
 
         {/* Footer pinned to bottom via marginTop: auto */}
