@@ -15,7 +15,7 @@ export const posts: JournalPost[] = [
     title: "Brand film vs documentary: which does your project need?",
     description:
       "Half the briefs we get for a documentary really want a brand film, and vice versa. Telling the line between them, and why pitching the wrong one matters.",
-    publishedAt: "2026-05-13",
+    publishedAt: "2026-06-22",
     readingTime: "4 min read",
     body: (
       <>
