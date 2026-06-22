@@ -11,6 +11,134 @@ export type JournalPost = {
 
 export const posts: JournalPost[] = [
   {
+    slug: "brand-film-vs-documentary",
+    title: "Brand film vs documentary: which does your project need?",
+    description:
+      "Half the briefs we get for a documentary really want a brand film, and vice versa. Telling the line between them, and why pitching the wrong one matters.",
+    publishedAt: "2026-05-13",
+    readingTime: "4 min read",
+    body: (
+      <>
+        <p>
+          Half the briefs we get from Nigerian brands for &ldquo;a
+          documentary&rdquo; really want a brand film with documentary energy.
+          Half the briefs for &ldquo;a brand film&rdquo; really want something
+          closer to documentary. They are not the same thing, and pitching the
+          wrong one is the difference between a film people watch once and a
+          film people share.
+        </p>
+
+        <h2>What a brand film is</h2>
+        <p>
+          A brand film exists to make the brand feel something specific. The
+          audience is people the brand wants to reach. The story is
+          constructed to lead them somewhere: a feeling, an idea, a call.
+          Voiceover, music, and cuts are written and edited to land that
+          feeling on a schedule.
+        </p>
+        <p>
+          A brand film answers to the brand first. The talent serves the
+          story, not the other way around. Length is usually short: 30 seconds
+          for a campaign cutdown, 90 seconds for a launch, three minutes if
+          the brand has earned that much of your attention. Anything longer
+          is a sign the script wasn&rsquo;t tight enough.
+        </p>
+        <p>
+          Examples we make often: launch films, manifesto films, hero films
+          for a new product, recruitment films, anniversary pieces.
+        </p>
+
+        <h2>What a documentary is</h2>
+        <p>
+          A documentary exists to tell a true story the filmmaker thinks is
+          worth telling. The audience is people who want to learn or feel
+          something they did not before. The story is shaped, but not
+          constructed: you do not know the ending when you start.
+        </p>
+        <p>
+          A documentary answers to the subject first. The brand or sponsor
+          may be in the credits, but they are not the protagonist. The
+          protagonist is a person, a place, a moment, a problem. Length runs
+          from a 12-minute short to feature-length. Anything much shorter is
+          not really a documentary, it is a documentary-style brand film,
+          which is fine, but call it that.
+        </p>
+        <p>
+          Examples we make often: founder documentaries, impact stories from
+          the field, short docs for awards or grants, longer pieces for
+          festivals.
+        </p>
+
+        <h2>The honest middle ground</h2>
+        <p>
+          A lot of agency work lives between the two. A founder profile film
+          is documentary in style, brand film in purpose: the subject is
+          real, the interview is unscripted, but the cut is shaped to land a
+          specific feeling about the brand. We make a lot of these.
+        </p>
+        <p>
+          This middle ground is fine, as long as everyone agrees on which
+          side it leans. A documentary that quietly turns into a brand film
+          breaks trust with the audience. A brand film that pretends to be a
+          documentary feels manipulative. The way to keep both honest is to
+          be clear about what the film is, from the brief, through
+          production, into how you describe it on the site.
+        </p>
+
+        <h2>How to know which you need</h2>
+        <p>Ask three questions in this order.</p>
+
+        <h3>Is there a real story already happening, with or without you?</h3>
+        <p>
+          If yes, documentary. If you are inventing the story to serve a
+          brand message, brand film.
+        </p>
+
+        <h3>Who is the protagonist?</h3>
+        <p>
+          If the brand or product is the protagonist, brand film. If a
+          person, place, or community is, documentary.
+        </p>
+
+        <h3>Are you comfortable not knowing how it ends?</h3>
+        <p>
+          If yes, documentary. If you need to know the message lands a
+          specific way, brand film.
+        </p>
+
+        <p>
+          If you answered yes to the first two and no to the third, you want
+          a documentary-style brand film. Call it that and brief accordingly.
+          We wrote a{" "}
+          <a href="/journal/how-to-brief-a-creative-agency-in-nigeria">
+            separate note
+          </a>{" "}
+          on what makes a brief work, if it helps.
+        </p>
+
+        <h2>What each costs differently</h2>
+        <p>
+          Brand films are scoped. We agree on a shot list, a script, and a
+          shoot day count. The cost is the cost.
+        </p>
+        <p>
+          Documentaries are scoped with more honesty about the unknown. We
+          agree on the access, the territory, the team, and the number of
+          shoot days. We do not know what we will get. The cost is the cost
+          of putting that team on the ground for that time. If you want a
+          documentary scoped like a brand film, you are buying a brand film.
+        </p>
+        <p>
+          This is the one thing more first-time clients get wrong than
+          anything else. Documentaries cost what they cost because you cannot
+          script reality. If the budget needs to be known to the cent before
+          you start, you are making a brand film. That is fine. Just brief
+          accordingly.
+        </p>
+      </>
+    ),
+  },
+  {
     slug: "how-to-brief-a-creative-agency-in-nigeria",
     title: "How to brief a creative agency in Nigeria",
     description:
