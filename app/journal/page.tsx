@@ -30,7 +30,7 @@ export default function JournalPage() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground/80">
             Short pieces on creative practice: briefs, projects, the craft.
-            Written from our Abuja studio.
+            Written from our studio in Nigeria.
           </p>
         </div>
       </section>

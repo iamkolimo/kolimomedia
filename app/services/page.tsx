@@ -21,9 +21,9 @@ export default function ServicesPage() {
             One studio. Four disciplines that talk to each other.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground/80">
-            A creative agency and media company based in Abuja, working with
-            brands across Nigeria. We pick the right combination for the job.
-            Sometimes one service is enough,
+            A creative agency and media company working with brands across
+            Nigeria. We pick the right combination for the job. Sometimes
+            one service is enough,
             sometimes the whole stack pulls together. Either way, you&apos;re
             working with one team.
           </p>

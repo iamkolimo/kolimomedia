@@ -66,7 +66,7 @@ export default function AboutPage() {
                   <dt className="font-mono text-xs uppercase tracking-widest text-muted">
                     Based in
                   </dt>
-                  <dd className="mt-2 text-3xl font-semibold">Abuja</dd>
+                  <dd className="mt-2 text-3xl font-semibold">Nigeria</dd>
                 </div>
                 <div className="bg-background p-6">
                   <dt className="font-mono text-xs uppercase tracking-widest text-muted">

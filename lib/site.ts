@@ -9,7 +9,7 @@ export const site = {
     "A creative agency and media company in Nigeria. We build brands through photography, video, branding, and design. Since 2014.",
   email: "hello@kolimomedia.com",
   notificationEmail: "kolimomedia@gmail.com",
-  location: "Abuja, Nigeria",
+  location: "Nigeria",
   founded: 2014,
   address: {
     locality: "Abuja",
