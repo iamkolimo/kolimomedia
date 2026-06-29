@@ -12,7 +12,7 @@ export default function Home() {
         <div className="absolute inset-0 -z-10" aria-hidden>
           <Image
             src="/hero.jpg"
-            alt="Behind the scenes at Kolimo Multimedia, a creative agency in Abuja, Nigeria."
+            alt="Behind the scenes at Kolimo Multimedia, a creative agency in Nigeria."
             fill
             priority
             sizes="100vw"
