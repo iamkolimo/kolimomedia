@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About · A Creative Agency in Abuja, Nigeria",
+  title: "About · A Creative Agency in Nigeria",
   description:
-    "Kolimo Multimedia is a creative agency and media company in Abuja, Nigeria. Building brands through photography, video, branding, digital marketing, and web design since 2014.",
+    "Kolimo Multimedia is a creative agency and media company in Nigeria. Building brands through photography, video, branding, digital marketing, and web design since 2014.",
   alternates: { canonical: "/about" },
 };
 

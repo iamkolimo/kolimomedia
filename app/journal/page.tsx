@@ -5,7 +5,7 @@ import { posts } from "@/lib/journal";
 export const metadata: Metadata = {
   title: "Journal · Notes from a Creative Agency in Nigeria",
   description:
-    "Notes on creative work, briefs, and the craft of building brands, from Kolimo Multimedia, a creative agency in Abuja, Nigeria.",
+    "Notes on creative work, briefs, and the craft of building brands, from Kolimo Multimedia, a creative agency in Nigeria.",
   alternates: { canonical: "/journal" },
 };
 

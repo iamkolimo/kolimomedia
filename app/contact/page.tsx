@@ -3,9 +3,9 @@ import { ContactForm } from "./contact-form";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact · Creative Agency in Abuja, Nigeria",
+  title: "Contact · Creative Agency in Nigeria",
   description:
-    "Brief our Abuja studio. Production, digital marketing, creative direction, branding, web or app: we'd love to hear about your project.",
+    "Brief our studio. We work with brands across Nigeria on production, digital marketing, creative direction, branding, web and apps.",
   alternates: { canonical: "/contact" },
 };
 

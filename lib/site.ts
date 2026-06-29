@@ -4,9 +4,9 @@ export const site = {
   url: "https://kolimomedia.com",
   tagline: "Visual stories for brands worth watching.",
   description:
-    "Kolimo Multimedia is a creative agency and media company in Abuja, Nigeria. Brand films, photography, digital marketing, branding, and web design. Building brands worth watching since 2014.",
+    "Kolimo Multimedia is a creative agency and media company in Nigeria. Brand films, photography, digital marketing, branding, and web design. Building brands worth watching since 2014.",
   shortDescription:
-    "A multimedia studio in Abuja. We build brands through photography, video, branding, and design. Since 2014.",
+    "A creative agency and media company in Nigeria. We build brands through photography, video, branding, and design. Since 2014.",
   email: "hello@kolimomedia.com",
   notificationEmail: "kolimomedia@gmail.com",
   location: "Abuja, Nigeria",
