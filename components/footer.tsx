@@ -89,7 +89,7 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col items-start justify-between gap-2 border-t border-border/60 pt-6 text-xs text-muted md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} Kolimo Multimedia. All rights reserved.</p>
-          <p className="font-mono">Made in Abuja.</p>
+          <p className="font-mono">Made in Nigeria.</p>
         </div>
       </div>
     </footer>
