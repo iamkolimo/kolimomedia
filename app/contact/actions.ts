@@ -1,5 +1,6 @@
 "use server";
 
+import { BUDGET_RANGES, PROJECT_TYPES, TIMELINES } from "@/lib/enquiry";
 import { getResend, renderContactEmail } from "@/lib/resend";
 import { site } from "@/lib/site";
 import { getSupabase } from "@/lib/supabase";
@@ -9,14 +10,6 @@ export type ContactState =
   | { status: "success" }
   | { status: "error"; message: string };
 
-const PROJECT_TYPES = [
-  "Production",
-  "Digital Marketing",
-  "Creative Direction",
-  "Web & App Solutions",
-  "Other",
-] as const;
-
 // Mirrors the Supabase CHECK constraints in supabase/schema.sql so we reject
 // oversized payloads in the action before paying the network round-trip.
 const MAX_LENGTH = {
@@ -24,7 +17,7 @@ const MAX_LENGTH = {
   email: 320,
   company: 200,
   projectType: 100,
-  message: 5000,
+  message: 4000,
 } as const;
 
 export async function submitContact(
@@ -41,6 +34,8 @@ export async function submitContact(
   const email = String(formData.get("email") ?? "").trim();
   const company = String(formData.get("company") ?? "").trim() || null;
   const projectType = String(formData.get("projectType") ?? "").trim();
+  const budget = String(formData.get("budget") ?? "").trim();
+  const timeline = String(formData.get("timeline") ?? "").trim();
   const message = String(formData.get("message") ?? "").trim();
 
   if (!name || !email || !message) {
@@ -71,15 +66,42 @@ export async function submitContact(
     return { status: "error", message: "Invalid project type." };
   }
 
-  const { error } = await getSupabase().from("contact_submissions").insert({
-    name,
-    email,
-    company,
-    project_type: projectType || null,
-    message,
-  });
+  if (budget && !BUDGET_RANGES.includes(budget as (typeof BUDGET_RANGES)[number])) {
+    return { status: "error", message: "Invalid budget range." };
+  }
 
-  if (error) {
+  if (timeline && !TIMELINES.includes(timeline as (typeof TIMELINES)[number])) {
+    return { status: "error", message: "Invalid timeline." };
+  }
+
+  // Budget and timeline ride along inside the message column, so the wizard
+  // needs no schema change. The notification email shows them as proper rows.
+  const extras = [
+    ...(budget ? [`Budget: ${budget}`] : []),
+    ...(timeline ? [`Timeline: ${timeline}`] : []),
+  ];
+  const storedMessage =
+    extras.length > 0 ? `${message}\n\n---\n${extras.join("\n")}` : message;
+
+  try {
+    const { error } = await getSupabase().from("contact_submissions").insert({
+      name,
+      email,
+      company,
+      project_type: projectType || null,
+      message: storedMessage,
+    });
+
+    if (error) {
+      console.error("[contact] Supabase insert failed:", error);
+      return {
+        status: "error",
+        message:
+          "Something went wrong saving your message. Please try again or email us directly.",
+      };
+    }
+  } catch (e) {
+    console.error("[contact] Supabase unavailable:", e);
     return {
       status: "error",
       message:
@@ -96,6 +118,8 @@ export async function submitContact(
       email,
       company,
       projectType: projectType || null,
+      budget: budget || null,
+      timeline: timeline || null,
       message,
     });
     try {

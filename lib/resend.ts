@@ -26,9 +26,12 @@ export function renderContactEmail(input: {
   email: string;
   company: string | null;
   projectType: string | null;
+  budget: string | null;
+  timeline: string | null;
   message: string;
 }): { subject: string; html: string; text: string } {
-  const { name, email, company, projectType, message } = input;
+  const { name, email, company, projectType, budget, timeline, message } =
+    input;
   const subject = `New project enquiry from ${name}`;
 
   const row = (label: string, value: string) =>
@@ -45,6 +48,8 @@ export function renderContactEmail(input: {
         ${row("From", `${escapeHtml(name)} &lt;<a href="mailto:${escapeHtml(email)}" style="color:#0f172a;">${escapeHtml(email)}</a>&gt;`)}
         ${company ? row("Company", escapeHtml(company)) : ""}
         ${projectType ? row("Project type", escapeHtml(projectType)) : ""}
+        ${budget ? row("Budget", escapeHtml(budget)) : ""}
+        ${timeline ? row("Timeline", escapeHtml(timeline)) : ""}
       </table>
     </td></tr>
     <tr><td style="padding:8px 24px 24px 24px;border-top:1px solid #e2e8f0;">
@@ -63,6 +68,8 @@ export function renderContactEmail(input: {
     `From: ${name} <${email}>`,
     company ? `Company: ${company}` : null,
     projectType ? `Project type: ${projectType}` : null,
+    budget ? `Budget: ${budget}` : null,
+    timeline ? `Timeline: ${timeline}` : null,
     "",
     "Message:",
     message,
