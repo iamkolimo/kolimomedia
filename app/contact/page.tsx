@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ContactForm } from "./contact-form";
+import { ProjectWizard } from "./project-wizard";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -84,8 +84,8 @@ export default function ContactPage() {
           </div>
 
           <div className="md:col-span-7">
-            <div className="rounded-2xl border border-border bg-zinc-950/40 p-8 md:p-10">
-              <ContactForm />
+            <div className="relative rounded-2xl border border-border bg-zinc-950/40 p-8 md:p-10">
+              <ProjectWizard />
             </div>
           </div>
         </div>
